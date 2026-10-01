@@ -28,7 +28,10 @@ import torch.nn.functional as F
 
 APP_TITLE = "GeneNet Research Beta"
 
-MODEL_PATH = Path("gene_model_v4_orfformer.pt")
+from pathlib import Path
+
+APP_DIR = Path(__file__).resolve().parent
+MODEL_PATH = APP_DIR / "gene_model_v4_orfformer.pt"
 
 WINDOW = 1024
 STRIDE = 256
